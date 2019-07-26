@@ -27,6 +27,7 @@
       name="cep"
       id="cep"
       v-model="cep"
+      @keyup="preencherCep"
     >
     <label for="rua">Rua</label>
     <input
@@ -71,6 +72,7 @@
 
 <script>
 import { mapFields } from '@/helpers.js';
+import { getCep } from '@/services.js'
 
 export default {
   name: "UsuarioForm",
@@ -79,7 +81,22 @@ export default {
       fields: ['nome', 'email', 'senha', 'cep', 'rua', 'numero', 'bairro', 'cidade', 'estado'],
       base: 'usuario',
       mutation: 'UPDATE_USUARIO'
-    })
+    }),
+
+  },
+  methods: {
+    preencherCep () {
+      const cep = this.cep.replace(/\D/g, "");
+      if (cep.length === 8) {
+        getCep(cep).then(response => {
+          this.rua = response.data.logradouro;
+          this.bairro = response.data.bairro;
+          this.cidade = response.data.localidade;
+          this.estado = response.data.uf;
+        })
+      }
+
+    }
   },
 
 }
