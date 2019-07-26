@@ -14,5 +14,8 @@ export default new Router({
       component: Home
     },
     
-  ]
+  ],
+  scrollBehavior () {
+    return window.scrollTo({top:0, behavior: "smooth"});
+  }
 })
