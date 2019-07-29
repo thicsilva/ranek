@@ -47,12 +47,14 @@ export default {
         descricao: "",
         fotos: null,
         usuario_id: "",
+        vendido: "false"
       }
     }
   },
   methods: {
     formatarProduto () {
       this.produto.usuario_id = this.$store.state.usuario.id;
+      
     },
     adicionarProduto () {
       this.formatarProduto();
