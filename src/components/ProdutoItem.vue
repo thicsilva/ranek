@@ -3,7 +3,7 @@
     class="produto"
     v-if="produto"
   >
-    <router-link :to="{name:'produto',
+    <router-link class="produto-img" :to="{name:'produto',
       params:
       {id:
       produto.id}}">
@@ -42,7 +42,7 @@ export default {
   align-self: end;
 }
 
-.produto img {
+.produto-img {
   border-radius: 4px;
   overflow: hidden;
   height: 100px;
