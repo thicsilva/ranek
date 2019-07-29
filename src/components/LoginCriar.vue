@@ -36,7 +36,7 @@ export default {
         this.$router.push({ name: "usuario" })
 
       } catch (error) {
-        console.log(erro);
+        console.log(error);
       }
     }
   },
