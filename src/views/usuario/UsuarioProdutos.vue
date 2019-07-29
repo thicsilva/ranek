@@ -14,6 +14,10 @@
       >
         <ProdutoItem :produto="produto">
           <p>{{produto.descricao}}</p>
+          <button
+            class="excluir"
+            @click="excluirProduto(produto.id)"
+          ></button>
         </ProdutoItem>
       </li>
 
@@ -22,6 +26,7 @@
 </template>
 
 <script>
+import { api } from '@/services.js';
 import ProdutoAdicionar from '@/components/ProdutoAdicionar.vue';
 import ProdutoItem from '@/components/ProdutoItem.vue';
 import { mapState, mapActions } from 'vuex';
@@ -35,7 +40,16 @@ export default {
     ...mapState(['login', 'usuario', 'usuario_produtos'])
   },
   methods: {
-    ...mapActions(['getUsuarioProdutos'])
+    ...mapActions(['getUsuarioProdutos']),
+    excluirProduto (id) {
+      const confirmar = window.confirm('Deseja remover este produto?');
+      if (confirmar) {
+        api.delete(`/produto/${id}`).then(() => {
+          this.getUsuarioProdutos();
+        })
+
+      }
+    }
   },
   watch: {
     login () {
@@ -53,5 +67,29 @@ export default {
 <style scoped>
 h2 {
   margin-bottom: 20px;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.3s;
+}
+
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+}
+
+.excluir {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../../assets/remove.svg") no-repeat center center;
+  height: 24px;
+  width: 24px;
+  text-indent: -140px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
 }
 </style>
