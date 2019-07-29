@@ -1,4 +1,50 @@
 {
+  "transacao": [
+    {
+      "comprador_id": "thi.csilva@hotmail.com",
+      "vendedor_id": "eu@email.com.br",
+      "produto": {
+        "id": "smartphone",
+        "nome": "Smartphone",
+        "usuario_id": "eu@email.com.br",
+        "preco": "1999",
+        "vendido": "false",
+        "descricao": "Esse é um novo smartphone.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "17031659",
+        "rua": "Rua Jorge Schneyder Filho",
+        "numero": "17031659",
+        "bairro": "Parque Bauru",
+        "cidade": "Bauru",
+        "estado": "SP"
+      },
+      "id": 1
+    },
+    {
+      "comprador_id": "thicsilva@hotmail.com",
+      "vendedor_id": "eu@email.com.br",
+      "produto": {
+        "id": "smartphone",
+        "nome": "Smartphone",
+        "usuario_id": "eu@email.com.br",
+        "preco": "1999",
+        "vendido": "false",
+        "descricao": "Esse é um novo smartphone.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "17031659",
+        "rua": "Rua Jorge Schneyder Filho",
+        "numero": "17031659",
+        "bairro": "Parque Bauru",
+        "cidade": "Bauru",
+        "estado": "SP"
+      },
+      "id": 2
+    }
+  ],
   "usuario": [
     {
       "id": "eu@email.com.br",
@@ -20,6 +66,18 @@
       "cep": "17031-659",
       "rua": "Rua Jorge Schneyder Filho",
       "numero": "1105",
+      "bairro": "Parque Bauru",
+      "cidade": "Bauru",
+      "estado": "SP"
+    },
+    {
+      "id": "thicsilva@hotmail.com",
+      "nome": "Thiago Silva",
+      "email": "thicsilva@hotmail.com",
+      "senha": "123456",
+      "cep": "17031659",
+      "rua": "Rua Jorge Schneyder Filho",
+      "numero": "12",
       "bairro": "Parque Bauru",
       "cidade": "Bauru",
       "estado": "SP"
