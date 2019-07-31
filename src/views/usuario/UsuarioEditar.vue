@@ -33,6 +33,9 @@ export default {
       }).catch(error => { this.erros.push(error.response.data.message) })
     }
   },
+  created () {
+    document.title = "Usuario / Editar"
+  },
 }
 </script>
 

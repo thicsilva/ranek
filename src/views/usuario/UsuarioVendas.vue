@@ -63,6 +63,7 @@ export default {
 
       this.getCompras();
     }
+    document.title = "Usuario / Vendas"
   },
   watch: {
     login () {

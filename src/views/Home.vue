@@ -15,7 +15,10 @@ export default {
   name: 'home',
   components: {
     ProdutosBuscar, ProdutosLista
-  }
+  },
+  created () {
+    document.title = "Ranek"
+  },
 
 }
 </script>
