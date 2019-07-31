@@ -15,12 +15,18 @@
 
 import TheHeader from '@/components/TheHeader.vue';
 import TheFooter from '@/components/TheFooter.vue';
+import { api } from '@/services.js';
 
 export default {
   components: {
     TheHeader,
     TheFooter
-  }
+  },
+  created () {
+    if (window.localStorage.ranek) {
+      api.validateToken().then(response => { this.$store.dispatch('getUsuario') }).catch(error => { window.localStorage.removeItem('ranek') });
+    }
+  },
 }
 </script>
 <style>
@@ -75,6 +81,12 @@ img {
 .btn:hover {
   background: #6655dd;
   transform: scale(1.1);
+}
+
+.btn-disabled,
+.btn-disabled:hover {
+  background: #bbbbcc;
+  transform: scale(1);
 }
 
 #app {

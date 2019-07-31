@@ -35,7 +35,7 @@
         </transition>
         <button
           v-else
-          class="btn"
+          class="btn btn-disabled"
           disabled
         >Produto Vendido</button>
       </div>
@@ -98,5 +98,20 @@ export default {
 .btn {
   margin-top: 60px;
   width: 200px;
+}
+
+.fotos {
+  grid-row: 1/3;
+}
+
+.info {
+  position: sticky;
+  top: 20px;
+}
+
+img {
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
+  border-radius: 4px;
 }
 </style>
