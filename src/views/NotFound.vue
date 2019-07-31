@@ -2,7 +2,7 @@
   <div class="not-found">
     <h1>Página não encontrada</h1>
     <router-link
-      class="btn"
+      class="home"
       to="/"
     >Ir para Home</router-link>
   </div>
@@ -15,10 +15,13 @@ export default {
 </script>
 
 <style scoped>
-.not-found {
-  height: 50vh;
+h1 {
+  margin: 20px auto;
+  text-align: center;
 }
-.not-found h1 {
+
+.home {
+  display: block;
   text-align: center;
 }
 </style>

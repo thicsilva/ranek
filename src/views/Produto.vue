@@ -65,12 +65,13 @@ export default {
       this.produto = null;
       api.get(`/produto/${this.id}`).then(response => {
         this.produto = response.data;
+        document.title = this.produto.nome
       });
     }
   },
   created () {
-    this.getProduto()
-  },
+    this.getProduto();
+  }
 }
 </script>
 

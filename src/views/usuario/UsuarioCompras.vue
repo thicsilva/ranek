@@ -52,6 +52,7 @@ export default {
 
       this.getCompras();
     }
+    document.title = "Usuario / Compras"
   },
   watch: {
     login () {
