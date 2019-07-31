@@ -71,11 +71,16 @@ export default {
       return form;
 
     },
-    adicionarProduto () {
+    async adicionarProduto (event) {
       const produto = this.formatarProduto();
-      api.post("/produto", produto).then(() => {
-        this.$store.dispatch("getUsuarioProdutos");
-      });
+      const button = event.currentTarget;
+
+      button.innerHTML = 'Adicionando...';
+      button.setAttribute('disabled', true);
+      await api.post("/produto", produto);
+      await this.$store.dispatch("getUsuarioProdutos");
+      button.innerHTML = 'Adicionar Produto';
+      button.removeAttribute('disabled')
     },
 
   },
