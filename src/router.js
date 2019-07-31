@@ -8,6 +8,7 @@ import UsuarioProdutos from '@/views/usuario/UsuarioProdutos.vue';
 import UsuarioCompras from '@/views/usuario/UsuarioCompras.vue';
 import UsuarioVendas from '@/views/usuario/UsuarioVendas.vue';
 import UsuarioEditar from '@/views/usuario/UsuarioEditar.vue';
+import NotFound from '@/views/NotFound.vue';
 
 Vue.use(Router)
 
@@ -15,6 +16,10 @@ const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    {
+      path: '*',
+      component: NotFound,
+    },
     {
       path: '/',
       name: 'home',
