@@ -20,10 +20,10 @@ export default {
   },
   methods: {
     atualizarUsuario () {
-      api.put(`/usuario/${this.$store.state.usuario.id}`, this.$store.state.usuario).then(() => {
+      api.put(`/usuario`, this.$store.state.usuario).then(() => {
         this.$store.dispatch('getUsuario');
         this.$router.push({ name: 'usuario' })
-      }).catch(error => { console.log(error)})
+      }).catch(error => { console.log(error) })
     }
   },
 }

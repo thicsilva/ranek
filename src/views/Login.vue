@@ -47,8 +47,10 @@ export default {
     LoginCriar
   },
   methods: {
-    logar () {
-      this.$store.dispatch("getUsuario", this.login.email);
+    async logar () {
+      await this.$store.dispatch("logarUsuario", this.login);
+      await this.$store.dispatch("getUsuario");
+
       this.$router.push({ name: "usuario" });
     }
   },

@@ -85,51 +85,6 @@
   ],
   "produto": [
     {
-      "id": "smartphone",
-      "nome": "Smartphone",
-      "usuario_id": "eu@email.com.br",
-      "preco": "1999",
-      "vendido": "false",
-      "descricao": "Esse é um novo smartphone.",
-      "fotos": null
-    },
-    {
-      "id": "smartphone",
-      "nome": "Smartphone",
-      "usuario_id": "eu@email.com.br",
-      "preco": "1999",
-      "vendido": "false",
-      "descricao": "Esse é um novo smartphone.",
-      "fotos": null
-    },
-    {
-      "id": "tablet",
-      "nome": "Tablet",
-      "usuario_id": "eu@email.com.br",
-      "preco": "1399",
-      "vendido": "false",
-      "descricao": "Esse é um novo tablet.",
-      "fotos": null
-    },
-    {
-      "id": "smartphone",
-      "nome": "Smartphone",
-      "usuario_id": "eu@email.com.br",
-      "preco": "1999",
-      "vendido": "false",
-      "descricao": "Esse é um novo smartphone.",
-      "fotos": null
-    },
-    {
-      "id": "tablet",
-      "nome": "Tablet",
-      "usuario_id": "eu@email.com.br",
-      "preco": "1399",
-      "vendido": "false",
-      "descricao": "Esse é um novo tablet.",
-      "fotos": null
-    },
-    {
       "id": "notebook",
       "nome": "Notebook 4",
       "usuario_id": "eu@email.com.br",
@@ -145,15 +100,6 @@
       "preco": "1999",
       "vendido": "false",
       "descricao": "Esse é um novo smartphone.",
-      "fotos": null
-    },
-    {
-      "id": "tablet",
-      "nome": "Tablet",
-      "usuario_id": "eu@email.com.br",
-      "preco": "1399",
-      "vendido": "false",
-      "descricao": "Esse é um novo tablet.",
       "fotos": null
     },
     {
@@ -175,15 +121,6 @@
       "fotos": null
     },
     {
-      "id": "tablet",
-      "nome": "Tablet",
-      "usuario_id": "eu@email.com.br",
-      "preco": "1399",
-      "vendido": "false",
-      "descricao": "Esse é um novo tablet.",
-      "fotos": null
-    },
-    {
       "id": "notebook",
       "nome": "Notebook 1",
       "usuario_id": "eu@email.com.br",
@@ -202,15 +139,6 @@
       "fotos": null
     },
     {
-      "id": "tablet",
-      "nome": "Tablet",
-      "usuario_id": "eu@email.com.br",
-      "preco": "1399",
-      "vendido": "false",
-      "descricao": "Esse é um novo tablet.",
-      "fotos": null
-    },
-    {
       "id": "notebook",
       "nome": "Notebook 2",
       "usuario_id": "eu@email.com.br",
@@ -226,15 +154,6 @@
       "preco": "1999",
       "vendido": "false",
       "descricao": "Esse é um novo smartphone.",
-      "fotos": null
-    },
-    {
-      "id": "tablet",
-      "nome": "Tablet",
-      "usuario_id": "eu@email.com.br",
-      "preco": "1399",
-      "vendido": "false",
-      "descricao": "Esse é um novo tablet.",
       "fotos": null
     },
     {
@@ -722,14 +641,6 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },
-    {
-      "nome": "Tablet",
-      "preco": "345",
-      "descricao": "Novo tablet",
-      "fotos": null,
-      "usuario_id": "eu@email.com.br",
-      "id": "oP-Yy9f"
     },
     {
       "nome": "teste",
