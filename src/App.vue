@@ -24,7 +24,9 @@ export default {
   },
   created () {
     if (window.localStorage.ranek) {
-      api.validateToken().then(response => { this.$store.dispatch('getUsuario') }).catch(error => { window.localStorage.removeItem('ranek') });
+      api.validateToken()
+        .then(() => { this.$store.dispatch('getUsuario') })
+        .catch(() => { window.localStorage.removeItem('ranek') });
     }
   },
 }

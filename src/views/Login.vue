@@ -20,10 +20,11 @@
         class="btn"
         @click.prevent="logar"
       >Logar</button>
+      <ErroNotificacao :erros="erros" />
     </form>
     <p class="perdeu">
       <a
-        href="/"
+        href="http://localhost:8000/wp-login.php?action=lostpassword"
         target="_blank"
       >Perdeu a senha? Clique aqui</a>
     </p>
@@ -40,7 +41,8 @@ export default {
       login: {
         email: "",
         senha: "",
-      }
+      },
+      erros: [],
     }
   },
   components: {
@@ -48,10 +50,16 @@ export default {
   },
   methods: {
     async logar () {
-      await this.$store.dispatch("logarUsuario", this.login);
-      await this.$store.dispatch("getUsuario");
+      this.erros = [];
+      try {
+        await this.$store.dispatch("logarUsuario", this.login);
+        await this.$store.dispatch("getUsuario");
 
-      this.$router.push({ name: "usuario" });
+        this.$router.push({ name: "usuario" });
+
+      } catch (error) {
+        this.erros.push(error.response.data.message);
+      }
     }
   },
 }

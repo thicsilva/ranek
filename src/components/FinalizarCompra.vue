@@ -6,6 +6,7 @@
         class="btn"
         @click.prevent="finalizarCompra"
       >Finalizar Compra</button>
+      <ErroNotificacao :erros="erros" />
     </UsuarioForm>
   </section>
 </template>
@@ -19,6 +20,11 @@ export default {
   name: "FinalizarCompra",
   components: {
     UsuarioForm
+  },
+  data () {
+    return {
+      erros: [],
+    }
   },
   props: ['produto'],
   computed: {
@@ -47,6 +53,7 @@ export default {
       })
     },
     async criarUsuario () {
+      this.erros = [];
       try {
         await this.$store.dispatch("criarUsuario", this.$store.state.usuario);
         await this.$store.dispatch("logarUsuario", this.$store.state.usuario);
@@ -54,7 +61,7 @@ export default {
         await this.criarTransacao();
 
       } catch (error) {
-        console.log(error);
+        this.erros.push(error.response.data.message);
       }
     },
     finalizarCompra () {
